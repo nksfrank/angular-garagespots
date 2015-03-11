@@ -58,26 +58,6 @@ var garageApp = angular.module("garageApp", [])
             }, time);
         }
 
-        /*var fetchRequest = null;
-        $interval(function() {
-            if(fetchRequest) { fetchRequest.resolve(); }
-            fetchRequest = $q.defer();
-
-            $scope.Messages = [{Message: "Uppdaterar platser från servern" },];
-            $("#message").slideDown("slow");
-            $http({
-                method: 'GET',
-                url: 'http://nikz.se/projects/angular/garage/mockup.php',
-            }).success(function(data) {
-                $timeout(function() {
-                    $scope.Messages = {};
-                    $("#message").slideUp("slow");
-                    //Move out of timer for live update
-                    $scope.Spots = data;
-                }, 2000);
-            });
-        }, 7000);*/
-
         $scope.close = function(id) {
             $("#"+id).slideUp();
         };
