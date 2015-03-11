@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="garageApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/garage.js"></script>
+    <title>Rental Movies | an Angular experiment</title>
+</head>
+
+<body ng-controller="AppController">
+    <div id="message" ng-click="close('message')" class="alert" ng-show="Messages">
+        <ul>
+            <li ng-repeat="m in Messages">
+                <div>{{m.Message}}</div>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="box">
+            <ul id="spots-list">
+                <li class="spot" ng-repeat="spot in Spots | orderBy : '-IsAvailable'">
+                    <div class="spot-{{spot.CssClass}}">
+                        <span class="car car-{{spot.CssClass}}">{{spot.Status}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p>G. Hedman, J. Takter, N. Frank</p>
+            <p>© Stretch Garage</p>
+        </div>
+    </div>
+</body>
