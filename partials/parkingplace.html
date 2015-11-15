@@ -1,0 +1,14 @@
+
+<div class="container"><a href="#/"><i class="fa fa-caret-left"></i> Parking Place</a></div>
+<div class="box">
+    <div id="spots-list" class="row" ng-repeat="spot in Spots | orderBy : '-IsAvailable'">
+        <ul>
+            <li class="spot-{{spot.CssClass}} col-xs-2">
+                <span class="car car-{{spot.CssClass}}"></span>
+            </li>
+            <li class="spot-{{spot.CssClass}} col-xs-10">
+                {{spot.Status}}
+            </li>
+        </ul>
+    </div>
+</div>
