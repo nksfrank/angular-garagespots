@@ -65,31 +65,28 @@ div.alert {
 
 ul {
     list-style-type: none;
-    margin: 0 !important;
+    margin: 1px 0 !important;
     padding: 0 !important;
 }
 li > :first-child {
     padding-left: 0.5em;
 }
-ul#spots-list {
+#spots-list {
     display:block;
     margin: 0;
     padding: 0;
 }
-ul#spots-list li{
+#spots-list li {
+    min-height: 40px;
+    padding:15px;
     font-weight: bold;
     display:block;
 }
-
-ul#spots-list li div {
-    margin: 0.1em 0;
-    padding:16px 8px;
-}
-ul#spots-list li div.spot-green {
+#spots-list ul li.spot-green {
     background: #87D37C;
     color: #FFFFFF;
 }
-ul#spots-list li div.spot-red {
+#spots-list ul li.spot-red {
     color: #FFF;
     font-weight: bold;
     background: #cc3333;
